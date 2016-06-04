@@ -1,0 +1,169 @@
+
+body{
+	font-family: Arial;
+}
+
+div {
+	border: 2px solid black;
+}
+
+h1 {
+	color: red;
+}
+
+h2 {
+	background-color: rgb(140,250,250);
+}
+
+img {
+
+	width: 400px;
+}
+
+.git {
+	border: 2px solid blue;
+}
+
+.agenda {
+	border: 2px solid black;
+}
+.ids-classes{
+	color: red;
+}
+#confidence {
+	width: 800px;
+}
+/*Notice that this overrides the h1, but keeps */
+#hello {
+	font-weight: bold;
+	color: blue;
+}
+#first-item {
+	font-size: 30px;
+}
+#margin-demo {
+	width: 400px;
+}
+#margin-experiment{
+	border: 2px solid yellow;
+/*	margin-top: 50px;
+	margin-right: 250px;
+	margin-bottom: 200px;
+	margin-left: 200px;
+*/
+	margin: 50px 250px 100px 100px;
+}
+
+
+#padding-experiment{
+	border: 2px solid yellow;
+	margin: 50px 250px 100px 100px;
+/*
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+*/
+	padding: 20px 20px 20px 20px;
+}
+
+#bootstrap-demo{
+	width: 800px;
+}
+
+/*
+ul {
+	text-decoration: line-through;
+}
+*/
+
+.projects {
+    padding: 50px;
+	background-color: orange;
+}
+.project-box1 {
+    height: 300px;
+    background-color: red;
+}
+
+.project-box2 {
+    height: 300px;
+    background-color: yellow;
+}
+
+.project-box3 {
+    height: 300px;
+    background-color: green;
+}
+
+.project-box4 {
+    height: 300px;
+    background-color: blue;
+}
+
+.project-box5 {
+    height: 300px;
+    background-color: red;
+}
+
+.project-box6 {
+    height: 300px;
+    background-color: white;
+}
+  
+  
+
+
+/*
+CSS 
+Cascading Style Sheets - Helps us change the site aesthetically.
+4 parts
+Delcaration - tags 
+Selection - the name of the part you want to style
+Property - properties to edit:; width, height
+Values - numbers, colors, etc.
+
+17. Connect file in head: 
+			<link rel="stylesheet" type="text/css" href="stylesheets.css">
+
+18. 3 different ways to define a color
+col name:  color: red;
+hex code: pound sign & six characters
+rgb code:rgb(0, 0, 255);
+http://www.w3schools.com/colors/colors_rgb.asp
+
+19. background-image: url(background.jpg);
+
+20. everything is affecting the entire document. Create a class
+
+21. <id> versus <class>  
+	id - 
+		used on single 
+	class can be used on multiple instance of the same element
+	id should only be used on one instance
+
+	position
+	type: absolute, fixed, and relative;
+	
+	Absolute means that it will stay wherever you add it orignally
+	Check google
+	Fixed position - means that it is stuck in one page, even if the 
+	page scrolls. Nav bars do this.
+
+	play with this:
+		h1 {
+			position: fixed;   //Where would you
+		};
+
+	relative position - an element with relative position is positioned 
+	relative to its default position
+	
+	img {
+		position: fixed;
+		left 50px;
+		bottom: ;
+		top: ;
+		right: ;
+
+	}
+*/
