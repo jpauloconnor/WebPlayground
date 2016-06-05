@@ -1,188 +1,188 @@
-/************************************************************
-*************************************************************
-******************* jQuery *********************************
-*************************************************************
-*************************************************************/
-
-//9.1 - What is jQuery? 
-//jQuery is a JavaScript library that allows users to manipulate the DOM in an easy way.
-//To get started using it, you'll need the following things:
-//Things you can do with jQuery.
-	//Add elements without reloading the page every time.
-	//Change menu itmes when users mouse over them
-	//Alert users when a form field is missing.
-	//Add motion and transitions
-	//Load data from a server 
-	//JavaScript versus jQuery
-
-/* HelloWorld */
-$(document).ready(function(){
-	$('#hw').click(function(){
-		$('#fadeInHelloWorld').fadeIn(2000);
-	});
-});
-
-/* Elephant and Donut Functions */
-	//hide,fade, shake, bounce, right
-
 $(document).ready(function(){
 	$('#hideButton').click(function(){
-		$('#elephant').hide();
+		$('#bryce').hide();
 	});
 	$('#fadeInButton').click(function(){
-		$('#elephant').fadeIn(2000);
+		$('#bryce').fadeIn(2000);
 	});
 	$('#shakeButton').click(function(){
-		$('#elephant').effect("shake");
+		$('#bryce').effect("shake");
 	});
 	/*
 	$('bounceButton').click(function(){
 		$('#elephant').bounce();
 	});*/
 	$( "#rightButton" ).click(function() {
-  		$( "#elephant" ).animate({ "left": "+=50px" }, "slow" );
+  		$( "#bryce" ).animate({ "left": "-=150px" }, "slow" );
 	});
  
 	$( "#leftButton" ).click(function(){
-  		$( "#elephant" ).animate({ "left": "-=50px" }, "slow" );
+  		$( "#bryce" ).animate({ "left": "+=150px" }, "slow" );
 	});
-	// $('#rightButton').click(function(){
-	// 	$('#elephant').animate({"left": "+=50px"}, "slow");
-	// });
-	// $('#leftButton').click(function(){
-	// 	$('#elephant').animate({"left": "-=50px"}, "slow");
-	// });
-});
 
-$(document).ready(function(){
-	$('#reveal').click(function(){
-		$('#fadeIn1').fadeIn(2000);
+	$( "#explode" ).click(function(){
+		$( "#bryce").hide("explode", {pieces: 16}, 2000);
+	});
+	$( "#piece-together" ).click(function(){
+		$( "#bryce").show("explode", {pieces: 16}, 2000);
 	});
 });
 
 $(document).ready(function(){
-	$('button2').click(function(){
-		$('#fadeIn1').fadeIn(2000);
+	$("#rotate1").click(function(){
+		$(this).rotate();
+	}).click();
+
+	$('#rotate2').click(function() {
+    	$(this).rotate({ count:4, duration:0.6, easing:'ease-out' });
+  	});
+	$('#rotate3').click(function() {
+		$(this).rotate({ endDeg:180, persist:true });
+		}, function() {
+		$(this).rotate({ endDeg:360 });
+	});
+
+	$('#rotate4').click(function() {
+	    $(this).rotate({ endDeg:180, persist:true });
+	  }, function() {
+	    $(this).rotate({ endDeg:-360, duration:0.8, easing:'ease-in' });
+	});
+
+	$('#rotate5').click(function() {
+	    $(this).rotate({ startDeg:-25, endDeg:0, easing:'ease-in' });
+	});
+
+	$('#rotate6').click(function() {
+	    $(this)
+	      .css({ position:'relative', left:0 })
+	      .rotate({ count:2, easing:'ease-in', animate:{ left:120 } })
+	      .fadeTo(400, 0.1)
+	      .fadeTo(300, 1)
+	      .delay(200)
+	      .rotate({ endDeg:-360, count:3, easing:'ease-out', animate:{ left:0 } });
+	});
+
+	$('#rotate7').click(function() {
+	    $(this).rotate({ count:99999, forceJS:true });
+	 	}, function() {
+	   	$(this).stop();
 	});
 });
 
-// Functions for Playground #2
-// These move the text around.
-$(document).ready(function(){
-	$("#up").click(function(){
-		$("#change").animate({top:30}, 200);
-	});//end up
-	$("#down").click(function(){
-		$("#change").animate({top:500}, 2000);
-		$("#change").text("<--Check out that shirt!");
-	});//end down
-	$("#color").click(function(){
-		$("#change").css("color", "orange");
-	});//end color change
-	$("#hide").click(function(){
-		$("#change").toggle("fast");
-	});//end disappear
-});//end doc ready
-
-//Intern of the day
-$(document).ready(function(){
-	$("#clickMe").click(function(){
-		$("img").fadeIn(1000);
-		$("#picframe").slideToggle("slow");
-	});
-}); 
-
-//Do you like my shirt?
-/*$(document).ready(function(){
-	$(".talk").click(function(){
-		alert("Do you like my shirt?");
-	});
-});
-*/
-/***********************************/
-/***********************************/
-/* jQuery playground*/
-/***********************************/
-/***********************************/
-
-//
-$(document).ready(function(){
-    $("button1").click(function(){
-        $("#div1").fadeOut();
-        $("#div2").fadeOut("slow");
-        $("#div3").fadeOut(3000);
-    });
-});
-
-$(document).ready(function(){
-	$("#buttonUno").click(function(){
-		$("#image-area").hide();
-	});
-});
-
-$(document).ready(function(){
-	$("#buttonDos").click(function(){
-		$("#image-area").fadeIn();
-	});
-});
-
-$(document).ready(function(){
-	$("#buttonTres").click(function(){
-		$("#image-area").slideDown("slow");
-	});
-});
-
-$(document).ready(function(){
-	$("#buttonCuatro").click(function(){
-		$("image-area").toggle("bounce", { times:3 }, "slow");
-	});
-});
-
-$(document).ready(function(){
-	$("buttonCinco").click(function(){
-		$("image-area").animate({left: "250px"});
-	});
-});
-
-$(document).ready(function(){
-				
-				$(".head_spin").click(function(){
-					$(this).effect("shake");
-					$(".head_spin p").remove();
-					var msg = "Bryce, that shirt is making my head spin.";
-					alert(msg);
-					
-				});//end click function
-			});//end doc ready
-			
-//Intern Box
-//9.2 jQuery set up
-//1. Your script tag on the index.html page. Here's our example:
-//    <script src="Session10-jqueryintro.js"></script>
-
-//2. A link to jQuery in your <head>, much like we did with Bootstrap. 
-//    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-//9.3 - A breakdown of a jQuery function
-//The $ 
-//(document)
 
 
-//9.4 - jQuery documentation
-//9.5 - More functions
+
 /*
-$(document).ready(function(){
-	$('jQueryButtonOne').click(function(){
-		$(this).hide();
-	});
-});
-
-$(document).ready(function(){
-	$('vanish').click(function(){
-		$(this).vanish('slow');
-	});
-});
+jQuery-Rotate-Plugin v0.2 by anatol.at
+http://jsfiddle.net/Anatol/T6kDR/
 */
+$.fn.rotate=function(options) {
+  var $this=$(this), prefixes, opts, wait4css=0;
+  prefixes=['-Webkit-', '-Moz-', '-O-', '-ms-', ''];
+  opts=$.extend({
+    startDeg: false,
+    endDeg: 360,
+    duration: 1,
+    count: 1,
+    easing: 'linear',
+    animate: {},
+    forceJS: false
+  }, options);
 
-//9.6 - MOre practice
+  function supports(prop) {
+    var can=false, style=document.createElement('div').style;
+    $.each(prefixes, function(i, prefix) {
+      if (style[prefix.replace(/\-/g, '')+prop]==='') {
+        can=true;
+      }
+    });
+    return can;
+  }
 
+  function prefixed(prop, value) {
+    var css={};
+    if (!supports.transform) {
+      return css;
+    }
+    $.each(prefixes, function(i, prefix) {
+      css[prefix.toLowerCase()+prop]=value || '';
+    });
+    return css;
+  }
+
+  function generateFilter(deg) {
+    var rot, cos, sin, matrix;
+    if (supports.transform) {
+      return '';
+    }
+    rot=deg>=0 ? Math.PI*deg/180 : Math.PI*(360+deg)/180;
+    cos=Math.cos(rot);
+    sin=Math.sin(rot);
+    matrix='M11='+cos+',M12='+(-sin)+',M21='+sin+',M22='+cos+',SizingMethod="auto expand"';
+    return 'progid:DXImageTransform.Microsoft.Matrix('+matrix+')';
+  }
+
+  supports.transform=supports('Transform');
+  supports.transition=supports('Transition');
+
+  opts.endDeg*=opts.count;
+  opts.duration*=opts.count;
+
+  if (supports.transition && !opts.forceJS) { // CSS-Transition
+    if ((/Firefox/).test(navigator.userAgent)) {
+      wait4css=(!options||!options.animate)&&(opts.startDeg===false||opts.startDeg>=0)?0:25;
+    }
+    $this.queue(function(next) {
+      if (opts.startDeg!==false) {
+        $this.css(prefixed('transform', 'rotate('+opts.startDeg+'deg)'));
+      }
+      setTimeout(function() {
+        $this
+          .css(prefixed('transition', 'all '+opts.duration+'s '+opts.easing))
+          .css(prefixed('transform', 'rotate('+opts.endDeg+'deg)'))
+          .css(opts.animate);
+      }, wait4css);
+
+      setTimeout(function() {
+        $this.css(prefixed('transition'));
+        if (!opts.persist) {
+          $this.css(prefixed('transform'));
+        }
+        next();
+      }, (opts.duration*1000)-wait4css);
+    });
+
+  } else { // JavaScript-Animation + filter
+    if (opts.startDeg===false) {
+      opts.startDeg=$this.data('rotated') || 0;
+    }
+    opts.animate.perc=100;
+
+    $this.animate(opts.animate, {
+      duration: opts.duration*1000,
+      easing: $.easing[opts.easing] ? opts.easing : '',
+      step: function(perc, fx) {
+        var deg;
+        if (fx.prop==='perc') {
+          deg=opts.startDeg+(opts.endDeg-opts.startDeg)*perc/100;
+          $this
+            .css(prefixed('transform', 'rotate('+deg+'deg)'))
+            .css('filter', generateFilter(deg));
+        }
+      },
+      complete: function() {
+        if (opts.persist) {
+          while (opts.endDeg>=360) {
+            opts.endDeg-=360;
+          }
+        } else {
+          opts.endDeg=0;
+          $this.css(prefixed('transform'));
+        }
+        $this.css('perc', 0).data('rotated', opts.endDeg);
+      }
+    });
+  }
+
+  return $this;
+};
