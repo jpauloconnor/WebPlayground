@@ -2,11 +2,18 @@
 <html>
 <head>
 	<title>Web Playground</title>
+	<!--Bootstrap links-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!--jquery links-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+	<!--CSS links-->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
-</body>
-	<h1>Hello World!</h1>
+	<h1>Web Playground</h1>
 	<h3>This is a place to play around and learn web development</h3>
 	<h6>Let's have some fun!</h6>
 	<div class>
@@ -90,9 +97,10 @@
 		</div>
 		<br>
 		<!--Padding & margins-->
+		
 		<div class="margins-padding">
 			<h2>CSS Margins & Padding</h2>
-			<img src="marginsandpadding.png" id="margin-demo" >
+			<img src="img/marginsandpadding.png" id="margin-demo" >
 			<h3>Margins</h3>
 			<p>Margins can be tricky. Remember that it is the edge of the particular element that you're talking about. You can set the margin for divs, h's, p's, etc.</p> 
 
@@ -105,6 +113,7 @@
 		</div>
 		<br>
 
+		<!--Bootstrap Items-->
 		<div>
 			<h2>Bootstrap</h2>
 			<ul>
@@ -117,10 +126,125 @@
 
 			<h3>Getting Bootstrap</h3>
 			<p> Check out getbootstrap.com </p>
-			<img src="bootstrap.png" id="bootstrap-demo" >
+			<img src="img/bootstrap.png" id="bootstrap-demo" >
 
 
 		</div>
+
+		<div class="container">
+  			<h1>col-sm-6</h1>      
+  			<p>Resize the browser window to see the effect.</p>      
+  				<div class="row">
+   				 	<div class="col-sm-6" style="background-color:blue">
+   				 	<h4>col-sm-6</h4></div>
+    			
+    				<div class="col-sm-6" style="background-color:red">
+      				<h4>col-sm-6</h4></div>  
+    			</div>
+    		</div>
+  		</div>
+  		<br>
+
+  		<div class="container">
+  			<h1>col-sm-4</h1>      
+  			<p>Resize the browser window to see the effect.</p>      
+  			<div class="row">
+   				<div class="col-sm-4" style="background-color:green">
+   				 	<h4>col-sm-4</h4>
+    			</div>
+    			<div class="col-sm-4" style="background-color:white">
+      				<h4>col-sm-4</h4>  
+     			</div>
+     			<div class="col-sm-4" style="background-color:blue">
+      				<h4>col-sm-4</h4>  
+    			</div>
+    		</div>
+  		</div>
+  		<br>
+	
+		<div class="container">
+  			<h1>col-sm-3</h1>      
+  			<p>Resize the browser window to see the effect.</p>      
+  			<div class="row">
+   				<div class="col-sm-3" style="background-color:green">
+   				 	<h4>col-sm-3</h4>
+    			</div>
+    			<div class="col-sm-3" style="background-color:white">
+      				<h4>col-sm-3</h4>  
+     			</div>
+     			<div class="col-sm-3" style="background-color:blue">
+      				<h4>col-sm-3</h4>  
+    			</div>
+    			<div class="col-sm-3" style="background-color:yellow">
+      				<h4>col-sm-3</h4>  
+    			</div>
+    		</div>
+  		</div>
+  		<br>
+
+
+
+
+
+		<script src="scripts.js"></script>
+</body>
+</html>
+
+
+	<!--
+	1. html is going to provide your pages structure.
+		stands for hypertext markup language. The way that the internet is structured.
+	2. create folder on desktop -> call it playground -> open sublime -> 
+	   -> create new file -> save to folder as index.html -> index means hoem page.
+	3. html has tags and <tags> 
+	4. Sublime is a text editor. 
+	5. Opening and closing - html, head, body <-Head & Body, can't see head, can see body.
+	6. Difference between head & body
+	7. Adding <h1>Hello World</h1>
+	8. Hello world comes from...
+	9. Adding <h1> -> Experiment - see how high it goes.
+
+	10. Adding <p> tag. Stands for paragraph.
+
+	11. Line break tag. <br>
+	img doesn't have an end tag
+
+	12. Creating a table
+
+	11. <a> is anchor tag. Allows you to do attributes.
+	12. href allows you to enter a web page.
+
+	13. Style things the wrong way. Inline. 
+
+	<body style="background: blue">
+		<h1 style="color: red">
+		styel the picture: <img src="google.com" style width: 200px" />
+	14. Add the <title> tag to the <head> 
+
+	<style>
+		img {
+			width: 200px;
+		}
+	</style>
+
+
+	CSS 
+	Cascading Style Sheets
+	Different format
+	Delcaration - tags 
+	Selection - the name of the part you want to style
+	Property - properties to edit width, height
+	Values - numbers, colors, etc.
+	15. Create a new file. Call it stylesheet.css
+	16. Copy the style stuff over. 
+
+	17. Connect file in head: 
+		<link rel="stylesheet" type="text/css" href="stylesheets.css">
+
+placehold.it
+http://startbootstrap.com/template-overviews/round-about/
+
+	-->
 
 
 </html>
